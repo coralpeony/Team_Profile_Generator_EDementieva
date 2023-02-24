@@ -83,3 +83,51 @@ function questionsManager() {
         //    use the functionality from page-template to generate the team
       });
   };
+
+  const addEngineer = () => {
+    console.log("addEngineer")
+  inquirer
+    .prompt([
+      {
+        //engineer questions
+        type: "input",
+            message: "What is the engineer's name?",
+            name: "name",
+        
+      },
+      {
+        //engineer questions
+        type: "input",
+            message: "What is the engineer's id?",
+            name: "id",
+        
+      },
+      {
+        //engineer questions
+        type: "input",
+            message: "What is the engineer's email?",
+            name: "email",
+        
+      },
+      {
+        //engineer questions
+        type: "input",
+            message: "What is the engineer's gitHub account?",
+            name: "github",
+        
+      },
+    ])
+    .then((response) => {
+      // add new engineer to employees array
+      const engineer = new Engineer(
+        response.name,
+        response.id,
+        response.email,
+        response.github
+      );
+      
+      team.push(engineer);
+      addNextEmployee();
+      // promptForNextEmployee
+    });
+};
