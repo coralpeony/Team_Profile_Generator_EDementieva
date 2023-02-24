@@ -50,3 +50,36 @@ function questionsManager() {
         addNextEmployee();
       });
   }
+
+  const addNextEmployee = () => {
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          message: "Which type of team member would you like to add?",
+          name: "next",
+          choices: [
+            "engineer",
+            "intern",
+            "I dont want to add any more team members",
+          ],
+        },
+      ])
+      .then((response) => {
+        // if engineer
+        console.log(response)
+        if (response.next === "engineer") {
+          addEngineer();
+        }
+        //    promptForEngineer
+        // else if intern
+        else if (response.next === "intern") {
+          addIntern();
+        } else {
+          buildPage();
+        }
+        //    promptForIntern
+        // else
+        //    use the functionality from page-template to generate the team
+      });
+  };
