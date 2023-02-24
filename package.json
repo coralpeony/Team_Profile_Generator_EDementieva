@@ -1,0 +1,25 @@
+{
+  "name": "team_profile_generator_edementieva",
+  "version": "1.0.0",
+  "description": "generating a team profile",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coralpeony/Team_Profile_Generator_EDementieva.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coralpeony/Team_Profile_Generator_EDementieva/issues"
+  },
+  "homepage": "https://github.com/coralpeony/Team_Profile_Generator_EDementieva#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
