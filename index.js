@@ -133,22 +133,22 @@ const addIntern = () => {
       //intern questions
       {
         type: "input",
-        message: "What is the intern's name?",
+        message: "What is your intern's name?",
         name: "name",
       },
       {
         type: "input",
-        message: "What is the intern's ID?",
+        message: "What is your intern's ID?",
         name: "id",
       },
       {
         type: "input",
-        message: "What is the intern's email address?",
+        message: "What is your intern's email address?",
         name: "email",
       },
       {
         type: "input",
-        message: "What is the intern's school?",
+        message: "What is your intern's school?",
         name: "school",
       },
     ])
@@ -166,6 +166,13 @@ const addIntern = () => {
     });
 };
 
-
+const buildPage = () => {
+   
+   fs.writeFile(outputPath, render(team), (err) => {
+    if (err) throw err;
+    console.log("Successfully generated HTML file");
+   })
+    
+};
 
 questionsManager();
